@@ -5,7 +5,8 @@ module.exports = new GoogleStrategy(
 	{
 		clientID: process.env.GOOGLE_CLIENT_ID,
 		clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-		callbackURL: '/auth/google/callback',
+		callbackURL:
+			'https://express-passport-api.herokuapp.com/auth/google/callback',
 		passReqToCallback: true
 	},
 	function (request, accessToken, refreshToken, profile, done) {

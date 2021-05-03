@@ -5,7 +5,8 @@ module.exports = new FacebookStrategy(
 	{
 		clientID: process.env.FACEBOOK_CLIENT_ID,
 		clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-		callbackURL: '/auth/facebook/callback',
+		callbackURL:
+			'https://express-passport-api.herokuapp.com/auth/facebook/callback',
 		profileFields: ['id', 'displayName', 'picture.type(large)']
 	},
 	function (request, accessToken, refreshToken, profile, done) {
