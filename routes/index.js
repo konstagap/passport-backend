@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const passport = require('passport');
 const { isAuth, sendUser, createUser } = require('../config/authMiddleware');
+const cors = require('cors');
 
 require('dotenv').config();
 
