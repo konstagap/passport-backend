@@ -24,12 +24,7 @@ app.set('trust proxy', 1);
 // Setting CORS so that any website can Access our API
 app.use(
 	cors({
-		origin: `${
-			process.env.NODE_ENV === 'production'
-				? `https://redux-react-auth-app.herokuapp.com/`
-				: `${process.env.CLIENT_BASE_URL}`
-		}`,
-		methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD'],
+		origin: 'https://redux-react-auth-app.herokuapp.com',
 		credentials: true
 	})
 );
