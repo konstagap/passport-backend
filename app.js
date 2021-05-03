@@ -26,7 +26,7 @@ app.use(
 	cors({
 		origin: `${
 			process.env.NODE_ENV === 'production'
-				? `${process.env.CLIENT_BASE_URL}`
+				? `https://redux-react-auth-app.herokuapp.com/`
 				: `${process.env.CLIENT_BASE_URL}`
 		}`,
 		methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD'],
